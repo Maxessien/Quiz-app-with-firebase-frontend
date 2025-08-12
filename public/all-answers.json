@@ -1,0 +1,162 @@
+[
+  {
+    "id": "csc102_lecture1",
+    "answers": [
+      "A. Central Processing Unit",
+      "D. All of the above",
+      "A. HyperText Markup Language",
+      "A. Base-2",
+      "A. Step-by-step procedure",
+      "C. Python",
+      "C. Oracle",
+      "A. Main circuit board",
+      "A. Random Access Memory",
+      "A. Translate code",
+      "A. Integrated Development Environment",
+      "A. Bits",
+      "A. Human-readable code",
+      "A. Graphical User Interface",
+      "A. Application Programming Interface"
+    ]
+  },
+  {
+    "id": "mat102_lecture1",
+    "answers": [
+      "A. 12",
+      "A. 2x",
+      "A. 3.14",
+      "A. 3",
+      "A. x + C",
+      "A. 3",
+      "A. 1",
+      "A. 7",
+      "A. 1",
+      "A. 8",
+      "A. 7",
+      "A. 180°",
+      "A. 16",
+      "A. 3",
+      "A. 1.0"
+    ]
+  },
+  {
+    "id": "csc112_lecture1",
+    "answers": [
+      "A. Java",
+      "A. Blueprint for objects",
+      "A. Reusing code",
+      "A. Internal state",
+      "A. Multiple forms",
+      "A. Initializer method",
+      "A. new",
+      "A. Child redefines parent",
+      "A. Showing essential features",
+      "A. Class diagram",
+      "A. super",
+      "A. private",
+      "A. Method signatures",
+      "A. Independent",
+      "A. Code"
+    ]
+  },
+  {
+    "id": "csc122_lecture1",
+    "answers": [
+      "A. Way to organize data",
+      "A. Array",
+      "A. Last in first out",
+      "A. Queues",
+      "A. Data & pointer",
+      "A. 2",
+      "A. Key ⇒ value mapping",
+      "A. Directed or undirected",
+      "A. Top element",
+      "A. Rear",
+      "A. Visiting elements",
+      "A. Tree",
+      "A. Max 2",
+      "A. Depth-First Search",
+      "A. Left < parent < right"
+    ]
+  },
+  {
+    "id": "phy102_lecture1",
+    "answers": [
+      "A. Newton",
+      "A. 3×10^8 m/s",
+      "A. m/s²",
+      "A. Velocity",
+      "A. F = ma",
+      "A. Joule",
+      "A. 1 N/m²",
+      "A. mgh",
+      "A. ½mv²",
+      "A. Pascal",
+      "A. Kilogram",
+      "A. Refraction",
+      "A. Force due to gravity",
+      "A. Joule",
+      "A. 9.8 m/s²"
+    ]
+  },
+  {
+    "id": "gns102_lecture1",
+    "answers": [
+      "A. General Studies",
+      "A. Humanities",
+      "A. Morals",
+      "A. Existence",
+      "A. Listening",
+      "A. Collaboration",
+      "A. Analyzing",
+      "A. Prioritizing",
+      "A. Society",
+      "A. Investigation",
+      "A. Honesty in studies",
+      "A. Soft",
+      "A. Critical thinking",
+      "A. Right and wrong",
+      "A. Understand others"
+    ]
+  },
+  {
+    "id": "gns112_lecture1",
+    "answers": [
+      "A. Starting a business",
+      "A. How a company makes money",
+      "A. Promoting a product",
+      "A. New ideas",
+      "A. Interested parties",
+      "A. Income",
+      "A. Revenue − Cost",
+      "A. New company",
+      "A. Chance of loss",
+      "A. Business presentation",
+      "A. Growing business",
+      "A. Specific customer group",
+      "A. Strengths, Weaknesses, Opportunities, Threats",
+      "A. Business relationships",
+      "A. Build-measure-learn"
+    ]
+  },
+  {
+    "id": "csc104_lecture1",
+    "answers": [
+      "A. Organized data storage",
+      "A. Structured Query Language",
+      "A. Relational",
+      "A. Rows and columns",
+      "A. Unique identifier",
+      "A. Primary key in another table",
+      "A. MongoDB",
+      "A. Query performance",
+      "A. Reduce redundancy",
+      "A. Rows from two tables",
+      "A. Atomicity, Consistency, Isolation, Durability",
+      "A. Defining structure",
+      "A. DELETE",
+      "A. Rules on data",
+      "A. Virtual table"
+    ]
+  }
+]

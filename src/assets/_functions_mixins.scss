@@ -1,0 +1,84 @@
+@use "sass:math";
+@use "sass:map";
+@function rem($pxVaalue) {
+  @return math.div($pxVaalue, 16) * 1rem;
+}
+@mixin flex($align, $justify, $gap: rem(0), $direction: row) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $direction;
+  gap: $gap;
+}
+@mixin grid($column: auto, $row: auto, $grid-gap: 0, $custom: "false") {
+  display: grid;
+  gap: $grid-gap;
+  @if $custom == "true" {
+    grid-template-columns: $column;
+    grid-template-rows: $row;
+  } @else if $custom == "false" {
+    grid-template-columns: repeat($column, 1fr);
+    grid-template-rows: repeat($row, 1fr);
+  } @else {
+    @error ($custom ' is not a valid custom value');
+  }
+}
+$sizes: (
+  small: rem(480),
+  medium: rem(768),
+  large: rem(1024),
+  x-large: rem(1440),
+);
+
+@mixin media($size, $custom: "false", $target: max-width) {
+  @if $custom == "true" {
+    @media ($target: $size) {
+      @content;
+    }
+  } @else {
+    @media ($target: map.get($sizes, $size)) {
+      @content;
+    }
+  }
+}
+
+@mixin button(
+  $padding: 0,
+  $background: none,
+  $border: none,
+  $border-rad: 0,
+  $bg-hover: $background
+) {
+  padding: $padding;
+  background: $background;
+  border: $border;
+  border-radius: $border-rad;
+  transition: all 150ms linear;
+  cursor: pointer;
+  &:hover {
+    background: $bg-hover;
+  }
+}
+
+@mixin text(
+  $font-size: inherit,
+  $font-weight: inherit,
+  $color: inherit,
+  $color-hover: $color,
+  $responsive: false
+) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  color: $color;
+  &:hover {
+    color: $color-hover;
+  }
+  @if $responsive {
+    @include media(medium) {
+      font-size: $font-size - rem($responsive);
+    }
+    // @include media(small) {
+    //   font-size: $font-size - rem($responsive * 2);
+    // }
+  }
+}

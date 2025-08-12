@@ -1,0 +1,51 @@
+@use "../../../assets/functions_mixins" as *;
+
+.cta-section {
+  @include flex(center, space-between);
+  width: 100vw;
+  background: rgb(15, 15, 15);
+  color: rgb(212, 212, 212);
+  padding: rem(25);
+  overflow: hidden;
+  @include media(medium) {
+    flex-direction: column;
+    gap: rem(15);
+    justify-content: center;
+  }
+  section {
+    @include flex(center, center, rem(20), column);
+    width: 50%;
+    opacity: 0;
+    transform: translateX(-20%);
+    @include media(medium) {
+      width: 100%;
+    }
+    .register-cta {
+      transform: translateX(20%);
+    }
+    h2 {
+      font-size: rem(40);
+      @include media(large) {
+        font-size: rem(30);
+      }
+      @include media(medium) {
+        font-size: rem(25);
+      }
+    }
+    button {
+      font-size: rem(17);
+      padding: rem(10) rem(15);
+      border-radius: rem(5);
+      transition: all 200ms linear;
+      color: rgb(212, 212, 212);
+      background: rgb(0, 56, 102);
+      cursor: pointer;
+      @include media(medium) {
+        padding: rem(7) rem(11);
+      }
+      &:hover {
+        background: rgb(1, 77, 139);
+      }
+    }
+  }
+}

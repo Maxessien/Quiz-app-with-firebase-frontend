@@ -1,0 +1,24 @@
+@use "../../../assets/functions_mixins" as *;
+@use "../../../assets/user-account-vairiables.scss" as *;
+
+.account-layout {
+  background: var(--body-bg);
+  width: 100vw;
+  height: max-content;
+  min-height: 100vh;
+  color: var(--text-color);
+  @include media(medium, "", min-width) {
+    @include grid(20% 80%, auto, 0, "true");
+  }
+  h1 {
+    font-size: rem(40);
+    color: rgb(0, 0, 41);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: var(--headers-color);
+  }
+}

@@ -1,0 +1,57 @@
+@use "../../../../assets/functions_mixins" as *;
+@use "../../../../assets/user-account-vairiables.scss" as *;
+
+.user-profile-section {
+  @include flex(flex-start, flex-start, rem(20), column);
+  padding: rem(25) rem(40);
+  width: 100%;
+  @include media(small) {
+    padding: rem(25) rem(15);
+  }
+  .user-profile-image {
+    width: rem(100);
+    height: rem(100);
+    border-radius: 50%;
+    border: rem(3) solid var(--blue-border);
+    @include flex(center, center);
+    font-size: rem(60);
+  }
+  .user-profile-form {
+    @include flex(flex-start, flex-start, rem(15), column);
+    width: 100%;
+    max-width: rem(568);
+    label {
+      @include flex(flex-start, flex-start, rem(5), column);
+      font-size: rem(20);
+      width: 100%;
+      input {
+        background: var(--light-bg);
+        max-width: 100%;
+        padding: rem(5) rem(15);
+        color: var(--text-color);
+        border-radius: rem(5);
+        border: rem(2) solid var(--blue-border);
+        &:disabled {
+          border: none;
+          color: var(--fade-text-color);
+        }
+        // &:focus{
+        // }
+      }
+      .password-input-wrapper {
+        input {
+          margin-right: rem(10);
+        }
+      }
+    }
+    .form-btns {
+      button {
+        @include button(rem(5) rem(10), var(--text-color), null, rem(5), var(--fade-text-color));
+        @include text(rem(18), 600, var(--body-bg));
+        &:first-child {
+          margin-right: rem(25);
+        }
+      }
+    }
+  }
+}

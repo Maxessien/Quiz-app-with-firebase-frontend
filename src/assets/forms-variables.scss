@@ -1,0 +1,22 @@
+@media (prefers-color-scheme: dark) {
+    :root{
+        --form-bg: linear-gradient(to bottom, rgb(0, 21, 27), rgb(36, 62, 70));
+        --form-text-color: rgb(231, 231, 231);
+        --form-shadow: rgba(173, 173, 173, 0.692);
+        --button-bg: rgb(0, 156, 0);
+        --button-bg-hover: rgb(0, 124, 0);
+        --form-link-color: rgb(8, 228, 0);
+        // --form-validation-color: brightness(6);
+    }
+}
+@media (prefers-color-scheme: light) {
+    :root{
+        --form-bg: rgb(231, 231, 231);
+        --form-text-color: rgb(0, 21, 27);
+        --form-shadow: rgb(14, 14, 14);
+        --button-bg: rgb(0, 63, 0);
+        --button-bg-hover: rgb(0, 124, 0);
+        --form-link-color: rgb(4, 107, 0);
+        // --form-validation-color: brightness(6);
+    }
+}

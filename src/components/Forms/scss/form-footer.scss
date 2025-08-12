@@ -1,0 +1,13 @@
+@use '../../../assets/functions_mixins' as *;
+@use '../../../assets/forms-variables.scss' as *;
+
+.form-paragraph{
+    color: var(--form-text-color);
+    font-size: rem(17);
+    text-align: center;
+    padding-top: rem(5);
+    .form-link{
+        color: var(--form-link-color);
+        font-weight: 600;
+    }
+}

@@ -1,0 +1,58 @@
+@use '../../../assets/functions_mixins' as *;
+
+.home-header{
+  padding: rem(10) rem(50);
+  width: 100vw;
+  height: rem(80);
+  @include flex(center, space-between);
+  background: #f2f4f7;
+  @include media(small){
+    padding: rem(20) rem(20);
+  height: rem(90);
+  }
+  img {
+    height: 100%;
+    transform: scaleX(1.13);
+  }
+}
+
+.logo-seperator{
+    @include flex(center, center, rem(20));
+    .hamburger-icon, .close-icon{
+        z-index: 999;
+    }
+    .home-nav{
+        @include media(medium){
+            position: fixed;
+            height: 100vh;
+            width: 100vw;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.89);
+            z-index: 99;
+        }
+        &-list{
+            @include flex(center, center, rem(15));
+            @include media(medium){
+                flex-direction: column;
+                padding-top: rem(100);
+            }
+            li{
+                a{
+                    color: rgb(0, 0, 36);
+                    font-size: rem(18);
+                    font-weight: 500;
+                    transition: all 200ms linear;
+                    @include media(medium){
+                        color: rgb(230, 230, 230);
+                    font-size: rem(20);
+            }
+                    &:hover{
+                        color: rgb(11, 129, 175);
+                    }
+                }
+            }
+        }
+
+    }
+}

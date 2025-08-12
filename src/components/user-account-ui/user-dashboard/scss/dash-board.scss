@@ -1,0 +1,67 @@
+@use "../../../../assets/functions_mixins" as *;
+@use "../../../../assets/user-account-vairiables.scss" as *;
+
+.user-dashboard {
+  @include flex(flex-start, flex-start, rem(25), column);
+  padding: rem(20) rem(25);
+  height: 100vh;
+  min-height: max-content;
+  h2 {
+    font-size: rem(30);
+  }
+  .quiz-overview {
+    @include flex(center, space-between, rem(15));
+    width: 100%;
+    @include media(medium) {
+      flex-direction: column;
+    }
+    .overview-card {
+      // border: 2px solid var(--blue-border);
+      border-radius: rem(8);
+      background: var(--light-bg);
+      padding: rem(10) rem(15);
+      box-shadow: 1.2px 2px 4px var(--fade-text-color);
+      @include media(medium) {
+        width: 100%;
+      }
+      p {
+        font-size: rem(17);
+        margin-top: rem(3);
+        font-weight: 600;
+      }
+    }
+  }
+
+  .progress {
+    @include flex(flex-start, center, rem(20), column);
+    width: 100%;
+    padding: rem(20) rem(20);
+    border-radius: rem(5);
+      box-shadow: 1.2px 2px 4px var(--fade-text-color);
+    h3 {
+      font-size: rem(25);
+    }
+    p {
+      font-size: rem(25);
+      font-weight: 700;
+      margin-bottom: rem(20);
+    }
+    .progress-bar-wrapper {
+      width: 100%;
+      @include flex(center, center);
+      .progress-bar {
+        position: relative;
+        width: rem(200);
+        height: rem(200);
+      }
+      span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: rem(35);
+        font-weight: 700;
+      }
+    }
+  }
+}

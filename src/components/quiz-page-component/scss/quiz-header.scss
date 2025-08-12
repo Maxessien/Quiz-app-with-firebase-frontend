@@ -1,0 +1,46 @@
+@use "../../../assets/functions_mixins" as *;
+
+.quiz-header {
+  padding: rem(20) rem(50);
+  width: 100vw;
+  height: rem(100);
+  @include flex(center, space-between);
+  background: #f2f4f7;
+  @include media(small){
+    padding: rem(20) rem(20);
+  height: rem(90);
+  }
+  img {
+    height: 100%;
+    transform: scaleX(1.13);
+  }
+  .timer {
+    font-size: rem(30);
+    font-weight: 700;
+    letter-spacing: rem(1.8);
+    color: #222;
+    background-color: #fff;
+    padding: 0.2rem 0.6rem;
+    border-radius: 8px;
+    box-shadow: 1px 1px 6px black;
+  @include media(small){
+    font-size: rem(25);
+  }
+  }
+  .danger {
+    animation: blink 1s linear infinite;
+    color: #ff4c4c;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

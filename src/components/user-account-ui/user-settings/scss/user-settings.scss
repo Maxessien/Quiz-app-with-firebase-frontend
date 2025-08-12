@@ -1,0 +1,74 @@
+@use "../../../../assets/functions_mixins" as *;
+@use "../../../../assets/user-account-vairiables.scss" as *;
+
+.user-settings-main {
+  padding: rem(25) rem(40);
+  h1 {
+    margin-bottom: rem(30);
+  }
+  .profile-settings {
+    @include flex(flex-start, flex-start, rem(25), column);
+    margin-bottom: rem(35);
+    h2 {
+      @include flex(center, space-between, rem(25));
+      width: 100%;
+      max-width: rem(568);
+      font-size: rem(25);
+    }
+    .account-info {
+      p {
+        font-size: rem(18);
+      }
+      p:first-child {
+        margin-bottom: rem(5);
+      }
+    }
+  }
+  .settings-logout-btn,
+  .reset-progress {
+    color: var(--text-color);
+    background: var(--light-bg);
+    padding: rem(10) rem(15);
+    width: 100%;
+    max-width: rem(568);
+    cursor: pointer;
+    transition: all 150ms linear;
+    border-radius: rem(5);
+    font-size: rem(18);
+    font-weight: 600;
+    &:hover {
+      background: var(--hover-light-bg);
+    }
+  }
+
+  .resets {
+    width: 100%;
+  }
+  .preference-settings {
+    @include flex(flex-start, flex-start, rem(25), column);
+    h2 {
+      font-size: rem(25);
+    }
+    .theme-settings {
+      @include flex(flex-start, flex-start, rem(10), column);
+      h3 {
+        font-size: rem(20);
+      }
+      label {
+        border: rem(2) solid var(--blue-border);
+        padding: rem(5) rem(10);
+        border-radius: rem(5);
+        width: 100%;
+        text-align: center;
+        cursor: pointer;
+        transition: 150ms all linear;
+        &:hover {
+          background: var(--light-bg);
+        }
+        input {
+          display: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,131 @@
+@use "../../../../assets/functions_mixins" as *;
+@use "../../../../assets/user-account-vairiables.scss" as *;
+
+.user-quiz-section {
+  padding: rem(20) rem(40);
+  @include media(medium) {
+    padding: rem(20) rem(30);
+  }
+  @include media(small) {
+    padding: rem(15) rem(20);
+  }
+  header {
+    .filters {
+      @include flex(center, space-between, rem(20));
+      padding: rem(15) rem(25);
+      @include media(medium) {
+        padding: rem(15) rem(0);
+      }
+      @include media(small) {
+        @include flex(flex-start, flex-start, rem(10), column);
+      }
+      .search-bar {
+        @include flex(center, flex-start, rem(5));
+        width: 50%;
+        input {
+          border: rem(2) solid var(--blue-border);
+          border-radius: rem(4);
+          padding: rem(3) rem(5);
+          color: var(--text-color);
+          background-color: var(--light-bg);
+          //   &:focus {
+          //     // background-color: rgb(238, 238, 238);
+          //   }
+          // @include media(medium){
+          //     width: 90%;
+          // }
+        }
+        button {
+          cursor: pointer;
+          color: var(--text-color);
+          &:hover {
+            transform: scale(1.03);
+          }
+        }
+      }
+
+      .filter-btn {
+        padding: rem(7) rem(10);
+        border-radius: rem(5);
+        border: 2px solid var(--blue-border);
+        background: var(--light-bg);
+        @include flex(center, center, rem(5));
+        color: var(--text-color);
+        cursor: pointer;
+        &:active {
+          filter: brightness(1.03);
+        }
+      }
+    }
+
+    .filter-wrapper {
+      @include flex(flex-start, space-between, rem(20));
+      z-index: 999;
+      padding: rem(20);
+      @include media(large) {
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+      @include media(medium) {
+        padding: rem(20) rem(10);
+      }
+      @include media(small) {
+        padding: rem(15) rem(5);
+      }
+      .category {
+        .all-courses {
+          @include grid(4, auto, rem(10));
+          @include media(small) {
+            grid-template-columns: repeat(3, 1fr);
+            gap: rem(5);
+          }
+          li {
+            margin-top: rem(10);
+            padding: rem(5) rem(8);
+            border-radius: rem(5);
+            cursor: pointer;
+            text-align: center;
+            transition: all 150ms linear;
+            box-shadow: 1.1px 1.4px 4px var(--fade-text-color);
+            &:active {
+              transform: scale(0.95);
+              box-shadow: 1px 1.3px 4px var(--fade-text-color);
+            }
+            // @include me
+          }
+        }
+        button {
+          background: var(--light-bg);
+          color: var(--text-color);
+          padding: rem(5) rem(10);
+          border-radius: rem(5);
+          margin-top: rem(20);
+          cursor: pointer;
+          transition: all 150ms linear;
+          box-shadow: 1.1px 1.4px 4px var(--fade-text-color);
+          &:active {
+            transform: scale(0.9);
+            box-shadow: 1px 1.2px 4px var(--fade-text-color);
+          }
+        }
+      }
+    }
+    .completed-quiz-filter {
+      @include flex(center, center, rem(15));
+      label {
+        cursor: pointer;
+        padding: rem(5) rem(8);
+        border-radius: rem(5);
+        transition: all 150ms linear;
+        box-shadow: 1.1px 1.4px 4px var(--fade-text-color);
+        &:active {
+          transform: scale(0.95);
+          box-shadow: 1px 1.2px 4px var(--fade-text-color);
+        }
+      }
+      input {
+        display: none;
+      }
+    }
+  }
+}

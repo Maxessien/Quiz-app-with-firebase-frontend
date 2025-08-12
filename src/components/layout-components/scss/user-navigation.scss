@@ -1,0 +1,29 @@
+@use "../../../assets/functions_mixins" as *;
+@use "../../../assets/user-account-vairiables.scss" as *;
+
+.user-account-navigation {
+  height: 100%;
+  min-height: 100vh;
+  background: var(--nav-bg);
+  padding: rem(85) rem(35);
+  z-index: 999;
+  @include media(medium) {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  ul {
+    @include flex(center, center, rem(20), column);
+    li {
+      font-size: rem(20);
+        color: var(--text-color)
+    }
+  }
+}
+.menu-toggle {
+  position: absolute;
+  top: rem(20);
+  right: rem(20);
+  color: var(--text-color);
+  z-index: 9999;
+}

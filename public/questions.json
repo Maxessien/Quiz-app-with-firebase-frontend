@@ -1,0 +1,137 @@
+[
+  {
+    "question": "Which of the following best explains why cache memory significantly improves processing speed?",
+    "options": [
+      "A. It stores the largest volume of data",
+      "B. It holds input and output devices",
+      "C. It stores frequently accessed instructions for fast retrieval",
+      "D. It is directly connected to the control unit"
+    ]
+  },
+  {
+    "question": "Why must programs be placed in primary memory before execution?",
+    "options": [
+      "A. It is the cheapest memory available",
+      "B. Only primary memory supports permanent storage",
+      "C. The processor can only fetch instructions from there",
+      "D. Output devices rely on it for display"
+    ]
+  },
+  {
+    "question": "What role does the control unit play in a computer system?",
+    "options": [
+      "A. Performs arithmetic calculations",
+      "B. Stores instructions permanently",
+      "C. Coordinates the sequence of operations across all units",
+      "D. Converts analog signals to digital"
+    ]
+  },
+  {
+    "question": "Which memory type loses its data when power is switched off?",
+    "options": [
+      "A. Cache memory",
+      "B. Secondary memory",
+      "C. Flash drive",
+      "D. Primary memory"
+    ]
+  },
+  {
+    "question": "Which of the following is a functional difference between analog and digital computers?",
+    "options": [
+      "A. Digital computers have more memory",
+      "B. Analog computers store data permanently",
+      "C. Analog computers handle continuous data; digital handle discrete",
+      "D. Digital computers are used only for graphics"
+    ]
+  },
+  {
+    "question": "The Arithmetic Logic Unit (ALU) performs operations on data stored in:",
+    "options": [
+      "A. Cache memory",
+      "B. Control registers",
+      "C. Registers",
+      "D. RAM only"
+    ]
+  },
+  {
+    "question": "A hybrid computer is best suited for situations where:",
+    "options": [
+      "A. Data is always digital",
+      "B. Data needs to be encrypted",
+      "C. Both analog and digital data need to be processed simultaneously",
+      "D. Only numeric data is required"
+    ]
+  },
+  {
+    "question": "Which unit is responsible for translating human inputs into binary for the processor to understand?",
+    "options": [
+      "A. Output Unit",
+      "B. Control Unit",
+      "C. Input Unit",
+      "D. Memory Unit"
+    ]
+  },
+  {
+    "question": "Why is cache memory preferred for storing loop instructions during program execution?",
+    "options": [
+      "A. It has higher capacity than RAM",
+      "B. It can be accessed faster than primary memory",
+      "C. It is non-volatile",
+      "D. It is shared with secondary memory"
+    ]
+  },
+  {
+    "question": "A supercomputer would most likely be used for which task?",
+    "options": [
+      "A. Running Microsoft Word",
+      "B. Accessing a website",
+      "C. Weather forecasting involving complex simulations",
+      "D. Performing a system shutdown"
+    ]
+  },
+  {
+    "question": "What makes microcomputers different from minicomputers?",
+    "options": [
+      "A. Microcomputers are only used by government agencies",
+      "B. Minicomputers are single-user machines",
+      "C. Microcomputers use magnetic tape as storage",
+      "D. Microcomputers are designed for individual use with a microprocessor"
+    ]
+  },
+  {
+    "question": "In the context of computer memory, what defines a “word”?",
+    "options": [
+      "A. A group of 8 bytes",
+      "B. A collection of output instructions",
+      "C. A fixed-size group of bits (e.g., 16, 32, 64) stored or retrieved at once",
+      "D. A special instruction in the control unit"
+    ]
+  },
+  {
+    "question": "Which unit determines how data flows between the ALU and memory?",
+    "options": [
+      "A. Input Unit",
+      "B. Output Unit",
+      "C. Registers",
+      "D. Control Unit"
+    ]
+  },
+  {
+    "question": "Which of these devices can serve both as an input and an output device?",
+    "options": [
+      "A. Mouse",
+      "B. Keyboard",
+      "C. Display Screen",
+      "D. Printer"
+    ]
+  },
+  {
+    "question": "What is the significance of memory addresses in a computer system?",
+    "options": [
+      "A. They convert binary to decimal",
+      "B. They store input device locations",
+      "C. They specify the exact location of data/instructions in memory",
+      "D. They represent operating system commands"
+    ]
+  }
+]

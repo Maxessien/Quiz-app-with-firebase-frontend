@@ -1,0 +1,51 @@
+import { Link } from 'react-router-dom';
+import '../scss/FormFooter.scss';
+import { useForm } from "react-hook-form";
+import "../scss/FormFields.scss";
+import { toast, ToastContainer } from "react-toastify";
+import '../scss/FormHeader.scss';
+import { useEffect } from "react";
+import "../scss/FormPage.scss";
+import LoginHeader from "./LoginHeader";
+import LoginFooter from "./LogInFooter";
+import LoginForm from "./LogInForm";
+import HomePageHeader from "../../home components/home-header";
+import { useEffect } from "react";
+import "../scss/FormPage.scss";
+import RegisterForm from "./register-form";
+import RegisterHeader from "./register-header";
+import RegisterFooter from "./register-footer";
+import HomePageHeader from "../../home components/home-header";
+import { Link } from 'react-router-dom';
+import '../scss/FormFooter.scss';
+import { useForm } from "react-hook-form";
+import "../scss/FormFields.scss";
+import { toast, ToastContainer } from "react-toastify";
+import '../scss/FormHeader.scss';
+import HomePageHeader from "./home-header"
+import { Link } from 'react-router-dom';
+import './scss/home-header.scss'
+import { useEffect, useRef, useState } from "react";
+import quizLogo from "/quiz-app-logo.png";
+import "./scss/quiz-header.scss";
+import QuizOverlay from "./quiz-overlay";
+import { useState } from 'react';
+import './scss/quiz-intro.scss'
+import { useEffect, useRef, useState } from "react";
+import QuizHeader from "./quiz-header";
+import QuizQuestions from "./quiz-questions";
+import QuizIntro from "./quiz-intro";
+import Results from "../Results/result-page";
+import { toast, ToastContainer } from "react-toastify";
+import { useState, useEffect, useRef } from "react";
+import "./scss/quiz-questions.scss";
+import "./results.scss";
+import HomePage from "./components/home components/home";
+import QuizPage from "./components/quiz-page-component/quiz-page";
+import Register from "./components/Forms/register-component/register";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./index.css";
+import Login from "./components/Forms/log in components/LogInPage";
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import App from './App.jsx'

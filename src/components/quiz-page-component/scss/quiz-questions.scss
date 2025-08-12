@@ -1,0 +1,109 @@
+@use "../../../assets/functions_mixins" as *;
+
+.quiz-main-content {
+  @include flex(flex-start, space-between, rem(20));
+  padding: rem(20);
+  @include media(large){
+   flex-direction: column; 
+   align-items: center;
+  }
+  @include media(small){
+    padding: rem(20) rem(0);
+  }
+}
+
+.quiz-content {
+  @include flex(flex-start, center, rem(15), column);
+  background: rgb(230, 230, 230);
+  padding: rem(20) rem(25);
+  border-radius: rem(10);
+  width: 60%;
+  overflow: hidden;
+  @include media(large){
+    width: 95%;
+    max-width: rem(600);
+  }
+  @include media(small){
+  padding: rem(20) rem(15);
+  }
+  h2 {
+    color: rgb(16, 0, 34);
+    text-align: center;
+    font-size: rem(22);
+    width: 100%;
+  @include media(small){
+    font-size: rem(20);
+  }
+  }
+  .options {
+    @include flex(flex-start, center, rem(10), column);
+    width: 100%;
+    li {
+      width: 100%;
+    }
+    label {
+      display: block;
+      color: rgb(235, 235, 235);
+      text-shadow: 1px 1px 2px black;
+      font-size: rem(17);
+      padding: rem(10);
+      border-radius: rem(5);
+      width: 100%;
+      cursor: pointer;
+      transition: all 300ms linear;
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+    input {
+      display: none;
+    }
+  }
+
+  .question-nav {
+    width: 100%;
+    @include flex(center, space-between, rem(25));
+    button {
+      background: rgb(0, 105, 0);
+      color: rgb(221, 221, 221);
+      text-shadow: 1px 1px 3px black;
+      font-size: rem(20);
+      width: max-content;
+      padding: rem(10) rem(15);
+      border-radius: rem(5);
+      transition: all 300ms linear;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.02);
+        filter: brightness(1.2);
+      }
+    }
+  }
+}
+
+.jump-to-question {
+  @include grid(5, auto, rem(10));
+  width: max-content;
+  padding: rem(15);
+  border-radius: rem(5);
+  background: rgb(27, 27, 27);
+  @include media(large){
+    grid-template-columns: repeat(10, 1fr);
+  }
+  @include media(rem(700), "true"){
+    grid-template-columns: repeat(5, 1fr);
+  }
+  button {
+    font-size: rem(22);
+    font-weight: 700;
+    padding: rem(13);
+    box-shadow: inset 0px 0px 5px 1px black;
+    border-radius: rem(5);
+    text-align: center;
+    transition: all 200ms linear;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.12);
+    }
+  }
+}

@@ -1,0 +1,632 @@
+[
+  {
+    "id": "csc102_lecture1",
+    "course_code": "CSC 102",
+    "title": "CSC 102 Lecture 1 Quiz",
+    "duration": 540,
+    "questions": [
+      {
+        "question": "1. What does CPU stand for?",
+        "options": [
+          "A. Central Processing Unit",
+          "B. Computer Program Unit",
+          "C. Central Program Unit",
+          "D. Control Processing Unit"
+        ]
+      },
+      {
+        "question": "2. Which is a programming paradigm?",
+        "options": [
+          "A. Imperative",
+          "B. Declarative",
+          "C. Functional",
+          "D. All of the above"
+        ]
+      },
+      {
+        "question": "3. HTML stands for?",
+        "options": [
+          "A. HyperText Markup Language",
+          "B. HyperText Machine Language",
+          "C. HighText Markup Language",
+          "D. Hyper Transfer Markup Logic"
+        ]
+      },
+      {
+        "question": "4. Which is a binary system?",
+        "options": ["A. Base-2", "B. Base-8", "C. Base-10", "D. Base-16"]
+      },
+      {
+        "question": "5. An algorithm is a:",
+        "options": [
+          "A. Step-by-step procedure",
+          "B. Data structure",
+          "C. Hardware component",
+          "D. Programming language"
+        ]
+      },
+      {
+        "question": "6. Which language is high-level?",
+        "options": [
+          "A. Assembly",
+          "B. Machine code",
+          "C. Python",
+          "D. Bytecode"
+        ]
+      },
+      {
+        "question": "7. Which is NOT an operating system?",
+        "options": ["A. Linux", "B. Windows", "C. Oracle", "D. macOS"]
+      },
+      {
+        "question": "8. What is a motherboard?",
+        "options": [
+          "A. Main circuit board",
+          "B. Secondary storage",
+          "C. Input device",
+          "D. Output device"
+        ]
+      },
+      {
+        "question": "9. RAM stands for?",
+        "options": [
+          "A. Random Access Memory",
+          "B. Read Arranged Memory",
+          "C. Run Access Memory",
+          "D. Real-time Access Memory"
+        ]
+      },
+      {
+        "question": "10. Primary function of a compiler?",
+        "options": [
+          "A. Translate code",
+          "B. Store data",
+          "C. Run programs",
+          "D. Manage memory"
+        ]
+      },
+      {
+        "question": "11. IDE stands for?",
+        "options": [
+          "A. Integrated Development Environment",
+          "B. Internal Data Engine",
+          "C. Integrated Data Editor",
+          "D. International Development Environment"
+        ]
+      },
+      {
+        "question": "12. Binary digits are called?",
+        "options": ["A. Bits", "B. Bytes", "C. Nibbles", "D. Words"]
+      },
+      {
+        "question": "13. What is source code?",
+        "options": [
+          "A. Human-readable code",
+          "B. Compiled code",
+          "C. Machine code",
+          "D. Encrypted code"
+        ]
+      },
+      {
+        "question": "14. GUI stands for?",
+        "options": [
+          "A. Graphical User Interface",
+          "B. Global User Interface",
+          "C. Graph User Index",
+          "D. General Used Input"
+        ]
+      },
+      {
+        "question": "15. What does API mean?",
+        "options": [
+          "A. Application Programming Interface",
+          "B. Application Program Input",
+          "C. Applied Programming Interface",
+          "D. Application Protocol Interface"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mat102_lecture1",
+    "course_code": "MAT 102",
+    "title": "MAT 102 Lecture 1 Quiz",
+    "duration": 540,
+    "questions": [
+      {
+        "question": "1. What is 5 + 7?",
+        "options": ["A. 12", "B. 13", "C. 11", "D. 10"]
+      },
+      {
+        "question": "2. What is the derivative of x²?",
+        "options": ["A. 2x", "B. x", "C. x²", "D. 2"]
+      },
+      {
+        "question": "3. What is the value of π (approx)?",
+        "options": ["A. 3.14", "B. 2.71", "C. 1.62", "D. 1.41"]
+      },
+      {
+        "question": "4. What is 12 ÷ 4?",
+        "options": ["A. 3", "B. 2", "C. 4", "D. 5"]
+      },
+      {
+        "question": "5. Integral of 1 dx is?",
+        "options": ["A. x + C", "B. 1 + C", "C. 0", "D. C"]
+      },
+      {
+        "question": "6. What is the slope of y = 3x + 5?",
+        "options": ["A. 3", "B. 5", "C. 8", "D. 0"]
+      },
+      {
+        "question": "7. What is 0 factorial (0!)?",
+        "options": ["A. 1", "B. 0", "C. Undefined", "D. Infinity"]
+      },
+      {
+        "question": "8. What is √49?",
+        "options": ["A. 7", "B. 6", "C. 8", "D. 9"]
+      },
+      {
+        "question": "9. What is cos(0°)?",
+        "options": ["A. 1", "B. 0", "C. -1", "D. Undefined"]
+      },
+      {
+        "question": "10. What is 2³?",
+        "options": ["A. 8", "B. 6", "C. 9", "D. 4"]
+      },
+      {
+        "question": "11. What is the next prime after 5?",
+        "options": ["A. 7", "B. 6", "C. 9", "D. 11"]
+      },
+      {
+        "question": "12. What is the sum of angles in a triangle?",
+        "options": ["A. 180°", "B. 360°", "C. 90°", "D. 270°"]
+      },
+      {
+        "question": "13. What is the perimeter of a square with side 4?",
+        "options": ["A. 16", "B. 12", "C. 8", "D. 18"]
+      },
+      {
+        "question": "14. What is the median of [1,2,3,4,5]?",
+        "options": ["A. 3", "B. 2", "C. 4", "D. 2.5"]
+      },
+      {
+        "question": "15. What is 100% as a decimal?",
+        "options": ["A. 1.0", "B. 0.1", "C. 10", "D. 0.01"]
+      }
+    ]
+  },
+  {
+    "id": "csc112_lecture1",
+    "course_code": "CSC 112",
+    "title": "CSC 112 Lecture 1 Quiz",
+    "duration": 540,
+    "questions": [
+      {
+        "question": "1. Which is an example of OOP language?",
+        "options": ["A. Java", "B. C", "C. Assembly", "D. Bash"]
+      },
+      {
+        "question": "2. What is a class in OOP?",
+        "options": [
+          "A. Blueprint for objects",
+          "B. A function",
+          "C. Variable",
+          "D. Loop"
+        ]
+      },
+      {
+        "question": "3. Inheritance is?",
+        "options": [
+          "A. Reusing code",
+          "B. Deleting code",
+          "C. Encrypting code",
+          "D. Compiling code"
+        ]
+      },
+      {
+        "question": "4. Encapsulation hides?",
+        "options": [
+          "A. Internal state",
+          "B. Code flow",
+          "C. Syntax errors",
+          "D. Memory usage"
+        ]
+      },
+      {
+        "question": "5. Polymorphism allows?",
+        "options": [
+          "A. Multiple forms",
+          "B. Single form",
+          "C. No form",
+          "D. Uniform form"
+        ]
+      },
+      {
+        "question": "6. A constructor is?",
+        "options": [
+          "A. Initializer method",
+          "B. Destructor",
+          "C. Loop",
+          "D. Variable"
+        ]
+      },
+      {
+        "question": "7. Which keyword creates an instance in Java?",
+        "options": ["A. new", "B. init", "C. create", "D. inst"]
+      },
+      {
+        "question": "8. Method overriding is?",
+        "options": [
+          "A. Child redefines parent",
+          "B. Deleting parent method",
+          "C. Encrypting method",
+          "D. Calling parent method"
+        ]
+      },
+      {
+        "question": "9. Abstraction means?",
+        "options": [
+          "A. Showing essential features",
+          "B. Showing everything",
+          "C. Hiding nothing",
+          "D. Confusing user"
+        ]
+      },
+      {
+        "question": "10. Which is a UML diagram?",
+        "options": [
+          "A. Class diagram",
+          "B. Flowchart",
+          "C. ER diagram",
+          "D. Pie chart"
+        ]
+      },
+      {
+        "question": "11. Which keyword refers to parent class in Java?",
+        "options": ["A. super", "B. parent", "C. this", "D. base"]
+      },
+      {
+        "question": "12. Descriptor for private in Java?",
+        "options": ["A. private", "B. public", "C. protected", "D. default"]
+      },
+      {
+        "question": "13. Interface contains?",
+        "options": [
+          "A. Method signatures",
+          "B. Method bodies",
+          "C. Variables",
+          "D. Constructors"
+        ]
+      },
+      {
+        "question": "14. Java is platform ___?",
+        "options": ["A. Independent", "B. Dependent", "C. Neutral", "D. None"]
+      },
+      {
+        "question": "15. OOP promotes ___ reuse?",
+        "options": ["A. Code", "B. Memory", "C. Hardware", "D. Network"]
+      }
+    ]
+  },
+  {
+    "id": "csc122_lecture1",
+    "course_code": "CSC 122",
+    "title": "CSC 122 Lecture 1 Quiz",
+    "questions": [
+      {
+        "question": "1. What is data structure?",
+        "options": [
+          "A. Way to organize data",
+          "B. A programming language",
+          "C. A hardware",
+          "D. An OS module"
+        ]
+      },
+      {
+        "question": "2. Which is linear DS?",
+        "options": ["A. Array", "B. Tree", "C. Graph", "D. Hash table"]
+      },
+      {
+        "question": "3. LIFO stands for?",
+        "options": [
+          "A. Last in first out",
+          "B. Last in first on",
+          "C. Line in first out",
+          "D. Load in first out"
+        ]
+      },
+      {
+        "question": "4. FIFO is used in?",
+        "options": ["A. Queues", "B. Stacks", "C. Trees", "D. Graphs"]
+      },
+      {
+        "question": "5. Linked list nodes contain?",
+        "options": [
+          "A. Data & pointer",
+          "B. Only data",
+          "C. Only pointer",
+          "D. Neither"
+        ]
+      },
+      {
+        "question": "6. Binary tree node max children?",
+        "options": ["A. 2", "B. 3", "C. 1", "D. Any"]
+      },
+      {
+        "question": "7. Hash table uses?",
+        "options": [
+          "A. Key ⇒ value mapping",
+          "B. Sequential search",
+          "C. Tree traversal",
+          "D. Pointer math"
+        ]
+      },
+      {
+        "question": "8. Graph edges can be?",
+        "options": [
+          "A. Directed or undirected",
+          "B. Only directed",
+          "C. Only undirected",
+          "D. None"
+        ]
+      },
+      {
+        "question": "9. Stack peek returns?",
+        "options": [
+          "A. Top element",
+          "B. Bottom element",
+          "C. All elements",
+          "D. Empty"
+        ]
+      },
+      {
+        "question": "10. Queue enqueue adds to?",
+        "options": ["A. Rear", "B. Front", "C. Middle", "D. Either end"]
+      },
+      {
+        "question": "11. What is traversal?",
+        "options": [
+          "A. Visiting elements",
+          "B. Deleting elements",
+          "C. Adding elements",
+          "D. Duplicating"
+        ]
+      },
+      {
+        "question": "12. Which is non-linear DS?",
+        "options": ["A. Tree", "B. Array", "C. Stack", "D. Queue"]
+      },
+      {
+        "question": "13. How many children in BST node?",
+        "options": ["A. Max 2", "B. Max 3", "C. 1", "D. None"]
+      },
+      {
+        "question": "14. DFS stands for?",
+        "options": [
+          "A. Depth-First Search",
+          "B. Direct First Search",
+          "C. Deep Flow Search",
+          "D. Distant First Search"
+        ]
+      },
+      {
+        "question": "15. BST property is?",
+        "options": [
+          "A. Left < parent < right",
+          "B. Parent < left < right",
+          "C. Left > parent > right",
+          "D. Unsorted"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "phy102_lecture1",
+    "course_code": "PHY 102",
+    "title": "PHY 102 Lecture 1 Quiz",
+    "questions": [
+      {
+        "question": "1. Unit of force?",
+        "options": ["A. Newton", "B. Joule", "C. Watt", "D. Pascal"]
+      },
+      {
+        "question": "2. Speed of light is approx?",
+        "options": [
+          "A. 3×10^8 m/s",
+          "B. 3×10^6 m/s",
+          "C. 3×10^5 m/s",
+          "D. 3×10^7 m/s"
+        ]
+      },
+      {
+        "question": "3. Acceleration unit?",
+        "options": ["A. m/s²", "B. m/s", "C. m²/s", "D. kg·m/s²"]
+      },
+      {
+        "question": "4. Which is a vector?",
+        "options": ["A. Velocity", "B. Speed", "C. Mass", "D. Temperature"]
+      },
+      {
+        "question": "5. Newton's 2nd law?",
+        "options": ["A. F = ma", "B. E = mc²", "C. F = mv", "D. V = at"]
+      },
+      {
+        "question": "6. Work unit is?",
+        "options": ["A. Joule", "B. Newton", "C. Pascal", "D. Watt"]
+      },
+      {
+        "question": "7. What is 1 Pa?",
+        "options": ["A. 1 N/m²", "B. 1 J/m²", "C. 1 W/m²", "D. 1 N·m"]
+      },
+      {
+        "question": "8. Potential energy formula?",
+        "options": ["A. mgh", "B. ½mv²", "C. F = ma", "D. E = mc²"]
+      },
+      {
+        "question": "9. Kinetic energy formula?",
+        "options": ["A. ½mv²", "B. mgh", "C. F = ma", "D. P = VI"]
+      },
+      {
+        "question": "10. Unit of pressure?",
+        "options": ["A. Pascal", "B. Newton", "C. Joule", "D. Watt"]
+      },
+      {
+        "question": "11. Mass unit is?",
+        "options": ["A. Kilogram", "B. Newton", "C. Joule", "D. Watt"]
+      },
+      {
+        "question": "12. What phenomenon causes mirage?",
+        "options": [
+          "A. Refraction",
+          "B. Reflection",
+          "C. Diffraction",
+          "D. Interference"
+        ]
+      },
+      {
+        "question": "13. What is weight?",
+        "options": [
+          "A. Force due to gravity",
+          "B. Mass",
+          "C. Density",
+          "D. Pressure"
+        ]
+      },
+      {
+        "question": "14. Unit of energy?",
+        "options": ["A. Joule", "B. Newton", "C. Watt", "D. Pascal"]
+      },
+      {
+        "question": "15. Acceleration due to gravity g?",
+        "options": ["A. 9.8 m/s²", "B. 9.8 km/s", "C. 9.8 m/s", "D. 9.8 N"]
+      }
+    ]
+  },
+  {
+    "id": "gns102_lecture1",
+    "course_code": "GNS 102",
+    "title": "GNS 102 Lecture 1 Quiz",
+    "questions": [
+      {
+        "question": "1. What does GNS stand for?",
+        "options": [
+          "A. General Studies",
+          "B. Geothermal Nuclear Science",
+          "C. Global Networking System",
+          "D. Geographic Name Service"
+        ]
+      },
+      {
+        "question": "2. GNS covers which area?",
+        "options": [
+          "A. Humanities",
+          "B. Mathematics",
+          "C. Physics",
+          "D. Chemistry"
+        ]
+      },
+      {
+        "question": "3. Ethics relates to?",
+        "options": ["A. Morals", "B. Numbers", "C. Force", "D. Energy"]
+      },
+      {
+        "question": "4. Philosophy is study of?",
+        "options": ["A. Existence", "B. Forces", "C. Chemicals", "D. Equations"]
+      },
+      {
+        "question": "5. Communication skill includes?",
+        "options": [
+          "A. Listening",
+          "B. Programming",
+          "C. Calculating",
+          "D. Mapping"
+        ]
+      },
+      {
+        "question": "6. Teamwork improves?",
+        "options": [
+          "A. Collaboration",
+          "B. Solo work",
+          "C. Isolation",
+          "D. Confusion"
+        ]
+      },
+      {
+        "question": "7. Critical thinking means?",
+        "options": [
+          "A. Analyzing",
+          "B. Memorizing",
+          "C. Copying",
+          "D. Ignoring"
+        ]
+      },
+      {
+        "question": "8. Time management is about?",
+        "options": [
+          "A. Prioritizing",
+          "B. Procrastinating",
+          "C. Ignoring",
+          "D. Delaying"
+        ]
+      },
+      {
+        "question": "9. Civic responsibility is for?",
+        "options": [
+          "A. Society",
+          "B. Only self",
+          "C. Only friends",
+          "D. Only family"
+        ]
+      },
+      {
+        "question": "10. Research involves?",
+        "options": [
+          "A. Investigation",
+          "B. Guesswork",
+          "C. Storytelling",
+          "D. Daydreaming"
+        ]
+      },
+      {
+        "question": "11. Academic integrity means?",
+        "options": [
+          "A. Honesty in studies",
+          "B. Cheating",
+          "C. Copying",
+          "D. Misrepresentation"
+        ]
+      },
+      {
+        "question": "12. Respect is a ___ skill?",
+        "options": ["A. Soft", "B. Hard", "C. Technical", "D. Analytical"]
+      },
+      {
+        "question": "13. Problem-solving is part of?",
+        "options": [
+          "A. Critical thinking",
+          "B. Forgetting",
+          "C. Skipping",
+          "D. Note-taking"
+        ]
+      },
+      {
+        "question": "14. Values are beliefs about?",
+        "options": [
+          "A. Right and wrong",
+          "B. Numbers",
+          "C. Measurements",
+          "D. Motion"
+        ]
+      },
+      {
+        "question": "15. Empathy is ability to?",
+        "options": [
+          "A. Understand others",
+          "B. Calc numbers",
+          "C. Code apps",
+          "D. Measure force"
+        ]
+      }
+    ]
+  }
+]
