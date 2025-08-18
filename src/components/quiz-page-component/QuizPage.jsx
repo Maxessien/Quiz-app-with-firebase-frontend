@@ -12,9 +12,7 @@ function QuizPage({ selectedQuiz }) {
   const [showQuestions, setShowQuestions] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  // const {quizzesTaken} = useUserData().userData
   const {backendBaseUrl} = useUserData()
-  // const [correctAnswers, setCorrectAnswers] = useState([]);
 
   const userAnswers = useRef([]);
 
@@ -58,7 +56,7 @@ function QuizPage({ selectedQuiz }) {
   return (
     <>
       {submitted && answersData.answers?.length > 0 ? (
-        <Results userAnswers={userAnswers} quizQuestions={selectedQuiz}  />
+        <Results userAnswers={userAnswers} quizQuestions={selectedQuiz} answersData={answersData} saveResult  />
       ) : (
         <>
           {!showQuestions ? (

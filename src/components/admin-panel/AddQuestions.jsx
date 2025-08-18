@@ -3,6 +3,8 @@ import { useForm } from "react-hook-form";
 import { toast, ToastContainer } from "react-toastify";
 import FormLayout from "../layout-components/FormLayout";
 import useUserData from "../stores-component/UsersData";
+import UserAccountLayout from "../layout-components/UserAccountLayout"
+import { auth } from "../../firebase/config";
 
 const AddQuestions = () => {
   const {backendBaseUrl} = useUserData()
@@ -12,18 +14,24 @@ const AddQuestions = () => {
     reset,
     formState: { errors, isSubmitting },
   } = useForm({
-    defaultValues: { type: "single", key: "", questions: "", answer: "", keyCode: "" },
+    defaultValues: { type: "single", questions: "", answer: "" },
     mode: "onTouched",
   });
 
-  const formSubmit = async ({ keyCode, questions, answer, type }) => {
+  const formSubmit = async ({ questions, answer, type }) => {
     try {
+      const idToken = await auth.currentUser.getIdToken();
       const res = await axios.post(
         `${backendBaseUrl}/add_quizzes_${type}`,
         {
-          key: keyCode,
           questions: JSON.parse(questions),
           answers: JSON.parse(answer),
+        },
+        {
+          headers: {
+            Authorisation: `Bearer ${idToken}`,
+            "Content-Type": "application/json",
+          },
         }
       );
       reset();
@@ -36,19 +44,8 @@ const AddQuestions = () => {
   };
   return (
     <>
-      <FormLayout>
-        <form onSubmit={handleSubmit(formSubmit)} className="user-form">
-          <label htmlFor="keyCode">
-            <span>Key Code</span>
-            <input
-              type="text"
-              id="keyCode"
-              {...register("keyCode", { required: "This field is required" })}
-            />
-            {errors.keyCode && (
-              <p className="error-message">{errors.keyCode.message}</p>
-            )}
-          </label>
+    <UserAccountLayout>
+        <form onSubmit={handleSubmit(formSubmit)} className="user-form px-10 py-10 w-full">
           <label htmlFor="type">
             <span>Type</span>
             <select className="w-full rounded-sm shadow-[inset_0_0_7px_var(--form-text-color)] px-2 py-1" {...register("type")} id="type">
@@ -93,7 +90,7 @@ const AddQuestions = () => {
           hideProgressBar={false}
           closeOnClick={true}
         />
-      </FormLayout>
+    </UserAccountLayout>
     </>
   );
 };

@@ -6,29 +6,38 @@ import { useForm } from "react-hook-form";
 import useUserData from "../../stores-component/UsersData";
 import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
+import { auth } from "../../../firebase/config";
 
 function UserProfile() {
   const { userData, setUserData, backendBaseUrl } = useUserData();
   const [editForm, setEditForm] = useState(true);
+  // const [showPassword, setShowPassword] = useState(false);
   const {
     register,
     handleSubmit,
     reset,
+    // watch,
     formState: { errors },
   } = useForm({
     mode: "onTouchend",
-    defaultValues: userData,
+    defaultValues: { ...userData },
   });
   const handleSave = async (data) => {
     try {
-      await axios.post(`${backendBaseUrl}/update_user`, {
-        ...data,
-        userId: userData.userId,
-      });
-      // await axios.post("https://max-quiz-app-backend.onrender.com/update", {
-      //   ...data,
-      //   userId: userData.userId,
-      // });
+      const idToken = await auth.currentUser.getIdToken();
+      await axios.post(
+        `${backendBaseUrl}/update_user`,
+        {
+          ...data,
+          userId: userData.userId,
+        },
+        {
+          headers: {
+            Authorisation: `Bearer ${idToken}`,
+            "Content-Type": "application/json",
+          },
+        }
+      );
       setUserData("userData", { ...data, userId: userData.userId });
       setEditForm(true);
       toast.success("Account successfully updated");
@@ -40,7 +49,7 @@ function UserProfile() {
 
   const handleCancel = () => {
     setEditForm(true);
-    reset(userData);
+    reset();
   };
   return (
     <>
@@ -94,6 +103,57 @@ function UserProfile() {
                 <p className="error-message">{errors.email.message}</p>
               )}
             </label>
+            {/* <label htmlFor="password">
+              <span className="input-tag">Password</span>
+              <div className="relative">
+                <div className="absolute top-3 right-1 text-md">
+                  {showPassword ? (
+                    <FaEye onClick={() => setShowPassword(false)} />
+                  ) : (
+                    <FaEyeSlash onClick={() => setShowPassword(true)} />
+                  )}
+                </div>
+                <input
+                  type={showPassword ? "text" : "password"}
+                  id="password"
+                  disabled={editForm}
+                  placeholder="Enter your password"
+                  {...register("password", {
+                    required: "Password is required",
+                    minLength: {
+                      value: 8,
+                      message: "Password must be at least 8 characters long",
+                    },
+                    pattern: {
+                      value: /^(?=.*[A-Za-z])(?=.*\d).+$/,
+                      message: "Password must contain a letter and anumber",
+                    },
+                  })}
+                />
+              </div>
+              {errors.password && (
+                <p className="error-message">{errors.password.message}</p>
+              )}
+            </label>
+            <label htmlFor="confirm-password">
+              <span className="input-tag">Confirm Password</span>
+              <input
+                type="password"
+                id="confirm-password"
+                disabled={editForm}
+                placeholder="Confirm password"
+                {...register("confirmPassword", {
+                  required: "Confirm Password",
+                  validate: (value) =>
+                    value === watch("password") || "Passwords must  match",
+                })}
+              />
+              {errors.confirmPassword && (
+                <p className="error-message">
+                  {errors.confirmPassword.message}
+                </p>
+              )}
+            </label> */}
 
             <div className="form-btns">
               <button

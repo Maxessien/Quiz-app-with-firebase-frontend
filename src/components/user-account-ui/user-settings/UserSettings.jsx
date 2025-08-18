@@ -2,7 +2,7 @@ import { FaPen, FaSlidersH, FaUser } from "react-icons/fa";
 import UserAccountLayout from "../../layout-components/UserAccountLayout";
 import "./scss/user-settings.scss";
 import useDarkMode from "../../stores-component/DarkLightThemeStore";
-import { useNavigate } from "react-router-dom";
+import { replace, useNavigate } from "react-router-dom";
 import useUserData from "../../stores-component/UsersData";
 import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
@@ -20,15 +20,22 @@ function UserSettings() {
   };
 
   const handleAccountDataReset = async () => {
-  try {
-      const res = await axios.post(`${backendBaseUrl}/reset_results_data`, {
-        userId: userData.userId,
-      });
-      // const res = await axios.post("https://max-quiz-app-backend.onrender.com/reset_results_data", {
-      //   user_id: userData.userId,
-      // });
+    try {
+      const idToken = await auth.currentUser.getIdToken();
+      const res = await axios.post(
+        `${backendBaseUrl}/reset_results_data`,
+        {
+          userId: userData.userId,
+        },
+        {
+          headers: {
+            Authorisation: `Bearer ${idToken}`,
+            "Content-Type": "application/json",
+          },
+        }
+      );
       console.log(res);
-      setUserData("userData", {...userData, quizzesTaken: []});
+      setUserData("userData", { ...userData, quizzesTaken: [] });
       toast.success("Quiz progress reset successful");
     } catch (error) {
       toast.error("There was an error, Please try again later");
@@ -38,7 +45,7 @@ function UserSettings() {
 
   const handleLogout = async () => {
     await signOut(auth);
-    // navigate("/login");
+    navigate("/login", replace);
     setIsDarkMode("system");
   };
 
@@ -57,7 +64,7 @@ function UserSettings() {
                   size={15}
                   style={{ cursor: "pointer" }}
                   onClick={() =>
-                    navigate(`/${userData.displayName.trim().toLowerCase()}/profile`)
+                    navigate(`/${userData.userId.trim().toLowerCase()}/profile`)
                   }
                 />
               </span>

@@ -29,6 +29,7 @@ function RegisterForm() {
         navigate("/login");
       }, 2000);
     } catch (err) {
+      console.log(err)
       toast.error(err.response.data.message);
     } finally {
       setIsLoading(false);

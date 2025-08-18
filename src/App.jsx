@@ -1,7 +1,7 @@
 import HomePage from "./components/home-components/Home";
 import QuizPage from "./components/quiz-page-component/QuizPage";
 import Register from "./components/Forms/register-component/Register";
-import { Navigate, Route, Routes, Outlet, useNavigate } from "react-router-dom";
+import { Navigate, Route, Routes, Outlet } from "react-router-dom";
 import "./index.css";
 import Login from "./components/Forms/login-components/LogInPage";
 import SuccessPage from "./components/all-quiz-components/SuccessPage";
@@ -20,13 +20,15 @@ import { auth } from "./firebase/config";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import AddQuestions from "./components/admin-panel/AddQuestions";
+import NotFoundPage from "./components/layout-components/NotFoundPage";
+import UserQuizHistory from "./components/user-account-ui/user-quiz-history/UserQuizHistory";
 
 function PublicRoute() {
   const { isLoggedIn, userData } = useUserData();
   if (isLoggedIn) {
     return (
       <Navigate
-        to={`/${userData.displayName.trim().toLowerCase()}/dashboard`}
+        to={`/${userData.userId.trim().toLowerCase()}/dashboard`}
         replace
       />
     );
@@ -42,15 +44,13 @@ function App() {
   const { userData, isLoggedIn, setUserData, fetchUserData, backendBaseUrl } =
     useUserData();
   const [userVerified, setUserVerified] = useState(false);
-  const navigate = useNavigate();
+  // const navigate = useNavigate()
   useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
+    onAuthStateChanged(auth, async(user) => {
       if (user) {
-        // setUserData("isLoggedIn", true);
-        fetchUserData(user.uid);
+        await fetchUserData();
       } else {
         setUserData("isLoggedIn", false);
-        navigate("/login");
       }
       setUserVerified(true);
     });
@@ -82,11 +82,13 @@ function App() {
 
   return (
     <>
+    {console.log(userData, "auth")}
       <Routes>
-        <Route path="/add_quiz" element={<AddQuestions />} />
+        {userVerified && <Route path={"*"} element={<NotFoundPage />} />}
+        {userData.admin && <Route path="/add_quiz" element={<AddQuestions />} />}
         <Route element={<PublicRoute />}>
           <Route path="/" element={<HomePage />} />
-          <Route path="/register" element={<Register />} />
+          <Route path="/register" element={<Register />} /> 
           <Route path="/login" element={<Login />} />
           <Route path="/quiz" element={<LoadAvailableQuiz />} />
           <Route path="/quiz/success" element={<SuccessPage />} />
@@ -102,20 +104,24 @@ function App() {
         {isLoggedIn && (
           <>
             <Route
-              path={`/${userData.displayName.trim().toLowerCase()}/dashboard`}
+              path={`/${userData.userId.trim().toLowerCase()}/dashboard`}
               element={<DashBoard />}
             />
             <Route
-              path={`/${userData.displayName.trim().toLowerCase()}/quiz`}
+              path={`/${userData.userId.trim().toLowerCase()}/quiz`}
               element={<UserQuizTab />}
             />
             <Route
-              path={`/${userData.displayName.trim().toLowerCase()}/settings`}
+              path={`/${userData.userId.trim().toLowerCase()}/settings`}
               element={<UserSettings />}
             />
             <Route
-              path={`/${userData.displayName.trim().toLowerCase()}/profile`}
+              path={`/${userData.userId.trim().toLowerCase()}/profile`}
               element={<UserProfile />}
+            />
+            <Route
+              path={`/${userData.userId.trim().toLowerCase()}/quiz_history`}
+              element={<UserQuizHistory />}
             />
           </>
         )}

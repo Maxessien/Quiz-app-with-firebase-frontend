@@ -38,22 +38,32 @@ function UserNavigation() {
       >
         <ul>
           <li>
-            <Link to={`/${userData.displayName.trim().toLowerCase()}/dashboard`}>
+            <Link to={`/${userData.userId.trim().toLowerCase()}/dashboard`}>
               DashBoard
             </Link>
           </li>
           <li>
-            <Link to={`/${userData.displayName.trim().toLowerCase()}/quiz`}>
+            <Link to={`/${userData.userId.trim().toLowerCase()}/quiz`}>
               Quiz
             </Link>
           </li>
           <li>
-            <Link to={`/${userData.displayName.trim().toLowerCase()}/profile`}>
+            <Link to={`/${userData.userId.trim().toLowerCase()}/profile`}>
               Profile
-            </Link> 
+            </Link>
           </li>
           <li>
-            <Link to={`/${userData.displayName.trim().toLowerCase()}/settings`}>
+            <Link to={`/${userData.userId.trim().toLowerCase()}/quiz_history`}>
+              Quiz History
+            </Link>
+          </li>
+          {userData.admin && (
+            <li>
+              <Link to={`/add_quiz`}>Add Quiz</Link>
+            </li>
+          )}
+          <li>
+            <Link to={`/${userData.userId.trim().toLowerCase()}/settings`}>
               Settings
             </Link>
           </li>

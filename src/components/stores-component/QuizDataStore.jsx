@@ -6,14 +6,21 @@ const useQuizData = create((set) => ({
   answersData: {},
 
   fetchQuizData: async (baseUrl) => {
-    const res = await axios.get(`${baseUrl}/quizzes`);
-    set({ quizData: res.data });
+    try {
+      console.log(`${baseUrl}/quizzes`)    
+      const res = await axios.get(`${baseUrl}/quizzes`);
+      set({ quizData: res.data });
+    } catch (err) {
+      console.log(err)
+    }
   },
   fetchQuizAnswers: async (id, baseUrl) => {
     try {
       const res = await axios.post(`${baseUrl}/quiz_answers`, { quizId: id });
+      console.log(res)
       set({ answersData: res.data });
     } catch (err) {
+      console.log(err)
       return err;
     }
   },

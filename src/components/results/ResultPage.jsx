@@ -6,11 +6,15 @@ import { Link, useNavigate } from "react-router-dom";
 import { buildStyles, CircularProgressbar } from "react-circular-progressbar";
 import PopUpModal from "../layout-components/PopUpModal";
 import { RxCross1 } from "react-icons/rx";
-import useQuizData from "../stores-component/QuizDataStore";
+import { auth } from "../../firebase/config";
 
-function Results({ userAnswers, quizQuestions }) {
+function Results({
+  userAnswers,
+  quizQuestions,
+  answersData,
+  saveResult = true,
+}) {
   const { isLoggedIn, userData, backendBaseUrl } = useUserData();
-  const {answersData} = useQuizData()
   const [showPopup, setShowPopup] = useState(false);
   const navigate = useNavigate();
   const hasRun = useRef(false);
@@ -21,39 +25,49 @@ function Results({ userAnswers, quizQuestions }) {
     }
   }
   useEffect(() => {
+    console.log(saveResult);
     if (isLoggedIn && !hasRun.current) {
       hasRun.current = true;
       const date = new Date();
       const newResultData = {
         courseCode: quizQuestions.course_code,
         score: ((total / answersData.answers.length) * 100).toFixed(2),
-        questions: quizQuestions.questions,
+        title: quizQuestions.title,
+        questions: quizQuestions,
         selectedAnswers: userAnswers,
-        correctAnswers: answersData.answers,
+        correctAnswers: answersData,
         timeStamp: date.toString(),
       };
+      console.log(newResultData, "ressss");
       const updateBackend = async () => {
         try {
-          const res = await axios.post(`${backendBaseUrl}/update_user`, {
-            userId: userData.userId,
-            quizzesTaken: [...userData.quizzesTaken, newResultData],
-          });
-          // const res = await axios.post(
-          //   "https://max-quiz-app-backend.onrender.com/update_results_db",
-          //   newResultData
-          // );
+          const idToken = await auth.currentUser.getIdToken();
+          const res = await axios.post(
+            `${backendBaseUrl}/update_user`,
+            {
+              userId: userData.userId,
+              quizzesTaken: [...userData.quizzesTaken, newResultData],
+            },
+            {
+              headers: {
+                Authorisation: `Bearer ${idToken}`,
+                "Content-Type": "application/json",
+              },
+            }
+          );
           console.log(res);
-          userData.quizzesTaken.push(newResultData)
-          // setUserData("userData", {...userData, quizzesTaken: newArray});
+          userData.quizzesTaken.push(newResultData);
         } catch (error) {
           console.log(error);
         }
-        // );
       };
-      updateBackend();
+      if (saveResult) {
+        console.log(saveResult);
+        updateBackend();
+      }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isLoggedIn]);
+  }, []);
   return (
     <>
       <section className="results-section">
@@ -106,9 +120,13 @@ function Results({ userAnswers, quizQuestions }) {
         </div>
         <div className="cta_buttons">
           {isLoggedIn ? (
-            <Link to={`/${userData.displayName.trim().toLowerCase()}/dashboard`}>
-              <button className="return-cta">Return To Dashboard</button>
-            </Link>
+            <>
+              {saveResult && (
+                <Link to={`/${userData.userId.trim().toLowerCase()}/dashboard`}>
+                  <button className="return-cta">Return To Dashboard</button>
+                </Link>
+              )}
+            </>
           ) : (
             <>
               <Link to={`/`}>

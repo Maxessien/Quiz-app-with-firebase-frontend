@@ -6,7 +6,7 @@ import { auth } from "../../../firebase/config";
 import { useState } from "react";
 
 function LoginForm() {
-  const [isLoading,  setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(false);
   const {
     register,
     handleSubmit,
@@ -15,14 +15,16 @@ function LoginForm() {
 
   const submitForm = async ({ email, password }) => {
     try {
-      setIsLoading(true)
+      setIsLoading(true);
       await signInWithEmailAndPassword(auth, email, password);
       toast.success("Login successful");
     } catch (err) {
-      console.log(err);
-      toast.error("Invalid email or password");
-    }finally{
-      setIsLoading(false)
+      console.log(err.message);
+      err.message.toLowerCase().trim().includes("user-not-found")
+        ? toast.error("Invalid email or password")
+        : toast.error("Server error, please try again later");
+    } finally {
+      setIsLoading(false);
     }
   };
   return (
