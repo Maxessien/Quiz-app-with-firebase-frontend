@@ -1,5 +1,6 @@
 import { create } from "zustand";
 import axios from "axios";
+// import { toast } from "react-toastify";
 
 const useQuizData = create((set) => ({
   quizData: [],
@@ -7,8 +8,7 @@ const useQuizData = create((set) => ({
 
   fetchQuizData: async (baseUrl) => {
     try {
-      console.log(`${baseUrl}/quizzes`)    
-      const res = await axios.get(`${baseUrl}/quizzes`);
+      const res = await axios.get(`${baseUrl}/quiz/questions`);
       set({ quizData: res.data });
     } catch (err) {
       console.log(err)
@@ -16,7 +16,7 @@ const useQuizData = create((set) => ({
   },
   fetchQuizAnswers: async (id, baseUrl) => {
     try {
-      const res = await axios.post(`${baseUrl}/quiz_answers`, { quizId: id });
+      const res = await axios.get(`${baseUrl}/quiz/answers/${id}`);
       console.log(res)
       set({ answersData: res.data });
     } catch (err) {

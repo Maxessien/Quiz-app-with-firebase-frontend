@@ -23,7 +23,7 @@ function UserSettings() {
     try {
       const idToken = await auth.currentUser.getIdToken();
       const res = await axios.post(
-        `${backendBaseUrl}/reset_results_data`,
+        `${backendBaseUrl}/user/reset`,
         {
           userId: userData.userId,
         },

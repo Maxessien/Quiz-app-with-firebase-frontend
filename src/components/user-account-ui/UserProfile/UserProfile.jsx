@@ -26,7 +26,7 @@ function UserProfile() {
     try {
       const idToken = await auth.currentUser.getIdToken();
       await axios.post(
-        `${backendBaseUrl}/update_user`,
+        `${backendBaseUrl}/user/update`,
         {
           ...data,
           userId: userData.userId,

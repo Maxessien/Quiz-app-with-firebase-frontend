@@ -22,7 +22,7 @@ const AddQuestions = () => {
     try {
       const idToken = await auth.currentUser.getIdToken();
       const res = await axios.post(
-        `${backendBaseUrl}/add_quizzes_${type}`,
+        `${backendBaseUrl}/add_quiz/${type}`,
         {
           questions: JSON.parse(questions),
           answers: JSON.parse(answer),

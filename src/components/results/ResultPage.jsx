@@ -43,7 +43,7 @@ function Results({
         try {
           const idToken = await auth.currentUser.getIdToken();
           const res = await axios.post(
-            `${backendBaseUrl}/update_user`,
+            `${backendBaseUrl}/user/update`,
             {
               userId: userData.userId,
               quizzesTaken: [...userData.quizzesTaken, newResultData],

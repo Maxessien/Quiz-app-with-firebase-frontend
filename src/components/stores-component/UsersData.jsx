@@ -17,7 +17,7 @@ const useUserData = create((set) => ({
     try {
       const idToken = await auth.currentUser.getIdToken()
       console.log("fetching")
-      const res = await axios.get(`https://quiz-app-with-firebase-backend.onrender.com/api/getuser`, {
+      const res = await axios.get(`https://quiz-app-with-firebase-backend.onrender.com/api/user/getuser`, {
         headers: {
           "Authorisation": `Bearer ${idToken}`,
           "Content-Type": "application/json"
